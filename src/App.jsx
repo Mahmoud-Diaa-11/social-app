@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import SinglePost from "./pages/SinglePost";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import ChangePassword from "./pages/ChangePassword";
+import NotFound from "./pages/NotFound";
 
 const client = new QueryClient();
 
@@ -53,6 +54,7 @@ const routers = createBrowserRouter([
           </ProtectRoutes>
         ),
       },
+      { path: "*", element: <NotFound /> },
     ],
   },
 ]);
